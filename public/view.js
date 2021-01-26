@@ -9,6 +9,18 @@ var pdfjsLib = window['pdfjs-dist/build/pdf'];
 pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
 
 var pagesCount;
+document.getElementsByClassName("btn")[0].disabled = true;
+
+document.getElementById('file').onchange = function (event) {
+    if (event.target.files[0].type != 'application/pdf') {
+        window.alert("Please select PDF File");
+        document.getElementById('file').value = "";
+        document.getElementsByClassName("btn")[0].disabled = true;
+    } else {
+        document.getElementsByClassName("btn")[0].disabled = false;
+    }
+}
+
 console.log(window.location.href);
 if (window.location.href === 'http://localhost:3000/upload') {
     async function fetchData() {
