@@ -55,6 +55,18 @@
         .height {
             height: 10px;
         }
+
+        .btn {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
     </style>
 
     <script>
@@ -80,8 +92,8 @@
 
 <body>
     <form action="/upload" enctype="multipart/form-data" method="POST">
-        <input type="file" name="pdf">
-        <input type="submit" value="Upload PDF"></input>
+        <input type="file" name="pdf" class="btn">
+        <input type="submit" value="Upload PDF" class="btn"></input>
     </form>
 
     <div class="height"></div><br>
